@@ -13,9 +13,14 @@ describe("Deck suit", function() {
     expect(deck.getDeck()).toEqual(baseArray);
   });
 
-  it("will return an array that is randomized", function() {
+  it("will return the last element in the array", function() {
     deck.generate()
-    deck.randomize()
+    expect(deck.getCard()).toEqual([3,3,3,3]);
+  });
+
+  it("will return an array that is shuffled", function() {
+    deck.generate()
+    deck.shuffle()
     expect(deck.getDeck()).toEqual(jasmine.arrayContaining(baseArray));
     expect(deck.getDeck()).not.toEqual(baseArray);
   });

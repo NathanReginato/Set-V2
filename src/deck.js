@@ -1,3 +1,4 @@
+import Element from "../src/createElement.js"
 export default class {
 
   constructor() {
@@ -17,8 +18,14 @@ export default class {
     }
   }
 
-  randomize() {
+
+  shuffle() {
     this.deck.sort(() => 0.5 - Math.random());
+  }
+
+  getCard() {
+    let topCard = this.deck.pop()
+    return topCard
   }
 
   getDeck() {
