@@ -1,4 +1,3 @@
-
 export default class {
 
   constructor(attributesArray) {
@@ -6,8 +5,15 @@ export default class {
     this.topCard = attributesArray
   }
 
-  constructElement(symbolArray) {
-    this.element = `<div class="card red oval empty"></div>`
+  constructElement() {
+    let color = colorArray[this.topCard[0]]
+    let shape = shapeArray[this.topCard[1]]
+    let shade = shadingArray[this.topCard[2]]
+
+    let string = `<div class="card ${color} ${shape} ${shade}"></div>`
+    .repeat(this.topCard[3] + 1)
+
+    this.element = string
   }
 
   getElement() {
