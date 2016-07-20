@@ -18,7 +18,6 @@ export default class {
     }
   }
 
-
   shuffle() {
     this.deck.sort(() => 0.5 - Math.random());
   }
