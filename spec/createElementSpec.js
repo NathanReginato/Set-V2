@@ -20,6 +20,4 @@ describe("Create element suit", function() {
     expect(element3.getElement()).toMatch(/<div class="card purple full">/)
   });
 
-
-
 });
