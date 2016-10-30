@@ -1,29 +1,29 @@
 export default class {
 
   constructor(attributesArray) {
-    this.element = ""
-    this.topCard = attributesArray
+    this.element = "";
+    this.topCard = attributesArray;
   }
 
   constructElement() {
-    let color = colorArray[this.topCard[0]]
-    let shape = shapeArray[this.topCard[1]]
-    let shade = shadingArray[this.topCard[2]]
+    let color = colorArray[this.topCard[0]];
+    let shape = shapeArray[this.topCard[1]];
+    let shade = shadingArray[this.topCard[2]];
     let hatch = ''
 
     if (shade === 'hatched') {
-      hatch = shapeHatchArray[this.topCard[1]]
+      hatch = shapeHatchArray[this.topCard[1]];
     }
 
-    let string = `<div class="card ${color} ${shade}">${svgOpeningTag} ${shape} ${hatch} ${svgClosingTag}</div>`
-    .repeat(this.topCard[3] + 1)
+    let string = `<div id="${this.topCard.join('')}" class="card ${color} ${shade}">${svgOpeningTag} ${shape} ${hatch} ${svgClosingTag}</div>`
+    .repeat(this.topCard[3] + 1);
 
-    this.element = string
+    this.element = string;
   }
 
   getElement() {
-    this.constructElement()
-    return this.element
+    this.constructElement();
+    return this.element;
   }
 }
 

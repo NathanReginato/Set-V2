@@ -1,4 +1,3 @@
-import Element from "../src/createElement.js"
 export default class {
 
   constructor() {
@@ -6,12 +5,12 @@ export default class {
   }
 
   generate() {
-    let cardCombinations = 4
+    let cardCombinations = 4;
     for (var i = 0; i < cardCombinations; i++) {
       for (var j = 0; j < cardCombinations; j++) {
         for (var k = 0; k < cardCombinations; k++) {
           for (var l = 0; l < cardCombinations; l++) {
-            this.deck.push([i,j,k,l])
+            this.deck.push([i,j,k,l]);
           }
         }
       }
@@ -23,8 +22,8 @@ export default class {
   }
 
   getCard() {
-    let topCard = this.deck.pop()
-    return topCard
+    let topCard = this.deck.pop();
+    return topCard;
   }
 
   getDeck() {
